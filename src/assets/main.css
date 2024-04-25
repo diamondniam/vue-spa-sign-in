@@ -1,0 +1,65 @@
+@import './base.css';
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-weight: normal;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+  padding: 3px;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
+  }
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+.errorEmail, .errorPass {
+  color: rgb(202, 51, 51);    
+}
+
+input {
+  height: 30px;
+  border-radius: 20px;
+  border: 2px solid var(--color-border);
+  background: var(--color-border);
+  outline: 0;
+  padding: 0 10px;
+  color: var(--vt-c-text-dark-2);
+  font-size: 15px;
+}
+
+button {
+  cursor: pointer;
+  margin-top: 30px;
+  border: 2px solid var(--color-border);
+  border-radius: 20px;
+  background: var(--color-border);
+  width: 60px;
+  height: 30px;
+}
