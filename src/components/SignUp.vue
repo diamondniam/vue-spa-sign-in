@@ -44,13 +44,15 @@ export default {
       }
     },
     addUser() {
-      if (this.users.get(this.hash(this.email)) === undefined) {
-        this.users.set(this.hash(this.email), this.hash(this.pass))
-        this.email = ''
-        this.pass = ''
-      } else {
-        this.errorEmail = 'User already exist.'
-        this.errorPass = []
+      if (this.errorEmail == '' && this.errorPass.length == 0) {
+        if (this.users.get(this.hash(this.email)) === undefined) {
+          this.users.set(this.hash(this.email), this.hash(this.pass))
+          this.email = ''
+          this.pass = ''
+        } else {
+          this.errorEmail = 'User already exist.'
+          this.errorPass = []
+        }
       }
     }
   }
